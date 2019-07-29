@@ -1,0 +1,62 @@
+<div class="card textcenter mt-3" [ngClass]="{'add-appointment': showForm}">
+
+    <div class="apt-addheading card-header bg-primary text-white"
+    (click)="toggleAptDisplay()">
+       <fa-icon icon="plus"></fa-icon> Add Customer
+    </div><!-- card-header -->
+    <div class="card-body">
+      <form id="aptForm" novalidate (ngSubmit)="handleAdd(aptForm.value);aptForm.reset()"
+        #aptForm="ngForm">
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right" for="Name">Name</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="name" placeholder="Name" ngModel>
+          </div><!-- col-md-10 --> 
+        </div><!-- form-group --> 
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right"
+            for="contact">Contact</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="contact" id="contact"
+              placeholder="Contact" ngModel>
+          </div><!-- col-md-10 -->
+        </div><!-- form-group --> 
+
+        <div class="form-group form-row">
+            <label class="col-md-2 col-form-label text-md-right"
+              for="tel">Telephone</label>
+            <div class="col-md-10">
+              <input type="text" class="form-control" name="tel" id="tel"
+                placeholder="Telephone" ngModel>
+            </div><!-- col-md-10 -->
+          </div><!-- form-group -->
+
+  
+          <div class="form-group form-row">
+            <label class="col-md-2 col-form-label text-md-right"
+              for="num">Number</label>
+            <div class="col-md-10">
+              <input type="text" class="form-control" name="num" id="num"
+                placeholder="Number of Employees" ngModel>
+            </div><!-- col-md-10 -->
+          </div><!-- form-group -->
+
+          <div class="form-group form-row">
+            <label class="col-md-2 col-form-label text-md-right"
+              for="location">Location</label>
+            <div class="col-md-10">
+              <input type="text" class="form-control" name="location" id="location"
+                placeholder="Location" ngModel>
+            </div><!-- col-md-10 -->
+          </div><!-- form-group -->
+  
+        <div class="form-group form-row mb-0">
+          <div class="offset-md-2 col-md-10">
+            <button type="submit" class="btn btn-primary d-block ml-auto"
+            >Add Appointment</button>
+          </div><!-- col-md-offset-2 --> 
+        </div><!-- form-group -->
+  
+      </form>
+    </div><!-- card-body -->
+  </div><!-- card-primary -->

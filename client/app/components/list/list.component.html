@@ -1,0 +1,48 @@
+<div class="appointment-list item-list mb-3">
+  <button class="btn btn-danger" (click)="displayRainy()">Display Rainy City</button>
+    <div class="pet-item col media py-3 border"
+      *ngFor="let item of dataList">
+      <div class="mr-3" (click)="deleteItem(item)">
+        <button class="pet-delete btn btn-sm btn-danger">
+            <fa-icon icon="times"></fa-icon>
+        </button>
+      </div><!-- media-left -->
+  
+      <div class="pet-info media-body">
+        <div class="pet-head d-flex">
+          <span class="label-item">Name: </span>
+          <span class="pet-name" contenteditable="true" 
+          #name (blur)="handleUpdate(item, 'name', name.innerText)">{{item.name}}</span>
+        </div><!-- pet-head -->
+        <div class="owner-name">
+          <span class="label-item">Contact: </span>
+          <span contenteditable="true"
+          #contact (blur)="handleUpdate(item, 'contact', contact.innerText)">{{item.contact}}</span>
+        </div>
+        <div class="owner-name">
+            <span class="label-item">Location: </span>
+            <span contenteditable="true"
+            #location (blur)="handleUpdate(item, 'location', location.innerText)">{{item.location}}</span>
+        </div>
+        <div class="owner-name">
+            <span class="label-item">Tel: </span>
+            <span contenteditable="true"
+            #telephone (blur)="handleUpdate(item, 'telephone', telephone.innerText)">{{item.telephone}}</span>
+        </div>
+
+        <div class="owner-name">
+            <span class="label-item">Num: </span>
+            <span contenteditable="true"
+            #number (blur)="handleUpdate(item, 'number', number.innerText)">{{item.number}}</span>
+        </div>
+
+        <div class="owner-name">
+            <span class="label-item">Rain Time: </span>
+            <span contenteditable="true"
+            #number (blur)="handleUpdate(item, 'number', number.innerText)">{{item.rainyTime}}</span>
+        </div>
+
+        
+      </div><!-- pet-info -->
+    </div><!-- pet-item -->
+  </div><!-- appointment-list -->
